@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Function</title>
+</head>
+<body>
+<h1>Berlatih Fungsi</h1>
+
+<h3>Contoh Soal</h3>
+<p>Buatlah sebuah fungsi bernama <b>tampilkan()</b> yang akan menampilkan "Aku Tampil" pada halaman HTML di elemen dengan ID <b>contohJawaban</b>.</p>
+<div id="contohJawaban"></div>
+
+<h3>Soal No.1</h3>
+<p>Buatlah sebuah fungsi bernama <b>teriak()</b>, yang mengembalikan nilai berupa <b>"Halo Function!"</b>, kemudian tampilkan di elemen dengan ID <b>jawaban1</b>.</p>
+<div id="jawaban1"></div>
+
+<h3>Soal No.2</h3>
+<p>Buatlah sebuah fungsi bernama <b>kalikan()</b>, yang menerima dua parameter, menghitung hasil perkalian kedua parameter tersebut, dan menampilkan hasilnya di elemen dengan ID <b>jawaban2</b>. <br><code>kalikan(5, 8)</code> akan menghasilkan output <b>40</b>.</p>
+<div id="jawaban2"></div>
+
+<h3>Soal No.3</h3>
+<p>Buatlah sebuah fungsi bernama <b>buatKalimat()</b>, yang menerima beberapa parameter seperti nama, umur, alamat, dan hobi, lalu menggabungkan semuanya menjadi sebuah kalimat lengkap. <br> 
+<pre>
+var name = "Sri Rahayu";
+var age = 21;
+var address = "Rokan Hulu, Riau";
+var hobby = "bernyanyi";
+buatKalimat(name, age, address, hobby);
+</pre>
+Hasil yang ditampilkan: <b>"Nama saya Sri Rahayu, umur saya 21 tahun, alamat saya di Rokan Hulu, Riau, dan saya punya hobby yaitu bernyanyi!"</b></p>
+<div id="jawaban3"></div>
+
+<script>
+// CONTOH
+// Kamu diminta untuk membuat fungsi bernama tampilkan() untuk menampilkan "Aku Tampil" pada halaman html.
+function tampilkan() {
+    document.getElementById("contohJawaban").innerHTML = "Aku Tampil";
+}
+// Jalankan function
+tampilkan();
+
+// Soal No. 1 Fungsi Teriak
+function teriak() {
+    document.getElementById("jawaban1").innerHTML = "Halo Function!";
+}
+// Jalankan function
+teriak();
+
+// Soal No. 2 Fungsi Kalikan
+function kalikan(num1, num2) {
+    let hasil = num1 * num2;
+    document.getElementById("jawaban2").innerHTML = hasil;
+}
+// Jalankan function
+kalikan(5, 8);
+
+// Soal No. 3 Fungsi buatKalimat
+function buatKalimat(nama, umur, alamat, hobi) {
+    let kalimat = `Nama saya ${nama}, umur saya ${umur} tahun, alamat saya di ${alamat}, dan saya punya hobby yaitu ${hobi}!`;
+    document.getElementById("jawaban3").innerHTML = kalimat;
+}
+// Jalankan function
+var name = "Sri Rahayu";
+var age = 21;
+var address = "Rokan Hulu, Riau";
+var hobby = "Bernyanyi";
+buatKalimat(name, age, address, hobby);
+</script>
+</body>
+</html>

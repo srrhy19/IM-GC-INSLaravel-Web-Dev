@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Array</title>
+</head>
+<body>
+<h1>Berlatih Array</h1>
+<h3>Looping Array</h3>
+<div id="jawaban1"></div>
+<script>
+
+var input = [
+  ["0001", "Sri Rahyu", "Pasir Pengaraian", "19/12/2002", "Bernyanyi"], 
+  ["0002", "Salsa Billa Qudsi", "Pasir Pengaraian", "29/09/2002", "Memasak"], 
+  ["0003", "Ara Ailia", "Simpang Pir", "15/05/2003", "Bernyanyi"], 
+  ["0004", "Annisa", "Kota Tengah", "15/02/2003", "Tidur"]
+];
+function dataHandling(arr) {
+  var output = '';  // untuk menginput data
+  for (var i = 0; i < arr.length; i++) {  
+    output += 'Nomor ID: ' + arr[i][0] + '<br>';
+    output += 'Nama Lengkap: ' + arr[i][1] + '<br>';
+    output += 'TTL: ' + arr[i][2] + ' ' + arr[i][3] + '<br>';
+    output += 'Hobi: ' + arr[i][4] + '<br><br>';  
+  }
+  return output;  
+}
+
+// untuk memanggil
+var jawaban1 = dataHandling(input);
+
+// Code kamu di sini, lakukan looping terhadap input di atas var jawaban1 // = Isikan outputnya di sini
+document.getElementById("jawaban1").innerHTML = jawaban1 </script>
+</body>
+</html>
