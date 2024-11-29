@@ -1,0 +1,71 @@
+SOAL 2 Membuat table database
+CREATE TABLE users (
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    email VARCHAR(255),
+    password VARCHAR(255)
+);
+
+CREATE TABLE categories (
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255)
+);
+
+CREATE TABLE items (
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    description VARCHAR(255),
+    price INTEGER,
+    stock INTEGER,
+    category_id INTEGER,
+    FOREIGN KEY (category_id) REFERENCES categories(id)
+);
+
+soal 3 Memasukkan Data pada Tabel
+sintak sql users
+INSERT INTO users (name, email, password) VALUES
+('John Doe', 'john@doe.com', 'password123'),
+('Jane Doe', 'jane@doe.com', 'password456');
+
+sintak sql categories
+INSERT INTO categories (name) VALUES
+('gadget'),
+('cloth'),
+('men'),
+('women'),
+('branded');
+
+INSERT INTO items (name, description, price, stock, category_id) VALUES
+('Sumsang b50', 'hape keren dari merek sumsang'),
+('Uniklooh', 'baju keren dari brand ternama'),
+('IMHO Watch', 'jam tangan anak yang jujur banget');
+
+soal 4 mengambil data dari database
+Mengambil data users (kecuali password)
+SELECT id, name, email FROM users;
+
+Mengambil data items dengan harga di atas 1 juta
+SELECT * FROM items WHERE price > 1000000;
+
+Mengambil data items dengan nama mirip "uniklo"
+SELECT * FROM items WHERE name LIKE '%uniklo%';
+
+Menampilkan data items join dengan categories
+SELECT 
+    items.name AS item_name, 
+    items.description, 
+    items.price, 
+    items.stock, 
+    categories.name AS category_name 
+FROM items 
+JOIN categories ON items.category_id = categories.id;
+
+SOAL 5
+
+UPDATE items SET price = 2500000 WHERE name = 'Sumsang b50';
+
+
+
+
+
+
